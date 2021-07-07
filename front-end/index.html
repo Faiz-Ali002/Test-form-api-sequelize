@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Template</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="custom.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="container-fluid main-boder">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 header">
+          <!-- <header> -->
+          <h2>Data Gathering Form</h2>
+          <button class="far fa-plus-square btn3" onclick="show()"></button>
+          <button class="btn4" onclick="logout()">logout</button>
+
+          <!-- </header> -->
+        </div>
+      </div>
+      <!-- ////////////////////////////////////// -->
+      <center>
+        <div class="row">
+          <div col-md-7>
+            <div class="show" id="login-form" onclick="return false">
+              <br /><br /><br /><br />
+              <h2>LogIn FORM</h2>
+              <form role="form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="login"
+                    id="login"
+                    placeholder="Login Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="loginemail"
+                    id="loginemail"
+                    unique="true"
+                    placeholder="password"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <button
+                      style="float: left"
+                      class="btn4"
+                      onclick="login1()"
+                      id="btn3"
+                    >
+                      LogIn
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </center>
+      <!-- -------------------------------- -->
+      <div class="row">
+        <div class="col-md-12 col-sm-12 out1 delt" id="tabledata">
+          <h2>Data Info</h2>
+          <div id="output" class="table-responsive">
+            <!-- DISPLAY USERS DATA -->
+          </div>
+        </div>
+
+        <div class="delt" id="formtable" onclick="return false">
+          <h2>SIGNUP FORM</h2>
+          <form role="form">
+            <div class="form-group">
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="First Name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                unique="true"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="gender"
+                id="gender"
+                placeholder="Gender"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                name="dob"
+                id="dob"
+                placeholder="DOB"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="phonno"
+                id="phoneno"
+                placeholder="Phone No"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <button style="float: left" class="btn1" onclick="inputData()">
+                  ADD / UPDATE
+                </button>
+                <button style="float: left" class="btn1" onclick="cancel()">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- ////////////////////// -->
+        <div class="delt" id="car-form" onclick="return false">
+          <h2>CAR FORM</h2>
+          <form role="form">
+            <div class="form-group">
+              <input
+                type="text"
+                name="fname"
+                id="cfname"
+                placeholder="User Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="carName"
+                id="carName"
+                placeholder="Car Name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                name="model"
+                id="model"
+                placeholder="Car Model"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="color"
+                id="color"
+                placeholder="Color"
+                required
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button
+                  style="float: left"
+                  class="btn1"
+                  onclick="addCar1()"
+                  id="btn2"
+                >
+                  Add
+                </button>
+                <button style="float: left" class="btn1" onclick="updateCar()">
+                  Update
+                </button>
+                <button style="float: left" class="btn1" onclick="cancelCar()">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <p>Footer</p>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0d3bbe8dd2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <script src="./custom.js"></script>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </footer>
+</html>
